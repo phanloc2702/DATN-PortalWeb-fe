@@ -31,13 +31,23 @@ import CompanyProfilePage from "../pages/recruiter/CompanyProfilePage";
 import PostJobPage from "../pages/recruiter/PostJobPage";
 import MyJobsPage from "../pages/recruiter/MyJobsPage";
 import ApplicationsPage from "../pages/recruiter/ApplicationsPage";
-
+import JobListPage from "../pages/public/JobListPage";
+import CompanyListPage from "../pages/public/CompanyListPage";
+import CompanyDetailPage from "../pages/public/CompanyDetailPage";
+import JobDetailPage from "../pages/public/JobDetailPage";
+import CandidateJobsPage from "../pages/candidate/CandidateJobsPage";
+import CandidateJobDetailPage from "../pages/candidate/CandidateJobDetailPage";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    
     children: [
       { index: true, element: <HomePage /> },
+      { path: "jobs", element: <JobListPage /> },
+      { path: "companies", element: <CompanyListPage /> },
+      { path: "jobs/:id", element: <JobDetailPage /> },
+      { path: "companies/:id", element: <CompanyDetailPage /> },
       { path: "login", element: <LoginPage /> },
       { path: "register", element: <RegisterPage /> },
       { path: "redirect-by-role", element: <RoleRedirect /> },
@@ -66,6 +76,8 @@ const router = createBrowserRouter([
     ),
     children: [
       { index: true, element: <CandidateDashboardPage /> },
+      { path: "jobs", element: <CandidateJobsPage /> },
+      { path: "jobs/:id", element: <CandidateJobDetailPage /> },
       { path: "profile", element: <ProfilePage /> },
       { path: "cv", element: <CVPage /> },
       { path: "applied-jobs", element: <AppliedJobsPage /> },

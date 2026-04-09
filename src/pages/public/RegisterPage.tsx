@@ -57,7 +57,7 @@ const RegisterPage = () => {
     >
       <form onSubmit={handleSubmit} className="space-y-5">
         <div>
-          <label className="mb-2 block text-sm font-medium text-slate-200">
+          <label className="mb-2 block text-sm font-medium text-slate-700">
             Họ và tên
           </label>
           <input
@@ -66,12 +66,12 @@ const RegisterPage = () => {
             placeholder="Nhập họ và tên"
             value={form.fullName}
             onChange={handleChange}
-            className="h-12 w-full rounded-2xl border border-white/10 bg-slate-900/70 px-4 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+            className="h-12 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
           />
         </div>
 
         <div>
-          <label className="mb-2 block text-sm font-medium text-slate-200">
+          <label className="mb-2 block text-sm font-medium text-slate-700">
             Email
           </label>
           <input
@@ -80,19 +80,19 @@ const RegisterPage = () => {
             placeholder="Nhập email"
             value={form.email}
             onChange={handleChange}
-            className="h-12 w-full rounded-2xl border border-white/10 bg-slate-900/70 px-4 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+            className="h-12 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
           />
         </div>
 
         <div>
-          <label className="mb-2 block text-sm font-medium text-slate-200">
+          <label className="mb-2 block text-sm font-medium text-slate-700">
             Vai trò
           </label>
           <select
             name="role"
             value={form.role}
             onChange={handleChange}
-            className="h-12 w-full rounded-2xl border border-white/10 bg-slate-900/70 px-4 text-sm text-white outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+            className="h-12 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm text-slate-900 outline-none transition focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
           >
             <option value="CANDIDATE">Ứng viên</option>
             <option value="RECRUITER">Nhà tuyển dụng</option>
@@ -100,7 +100,7 @@ const RegisterPage = () => {
         </div>
 
         <div>
-          <label className="mb-2 block text-sm font-medium text-slate-200">
+          <label className="mb-2 block text-sm font-medium text-slate-700">
             Mật khẩu
           </label>
           <input
@@ -109,12 +109,12 @@ const RegisterPage = () => {
             placeholder="Nhập mật khẩu"
             value={form.password}
             onChange={handleChange}
-            className="h-12 w-full rounded-2xl border border-white/10 bg-slate-900/70 px-4 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+            className="h-12 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
           />
         </div>
 
         <div>
-          <label className="mb-2 block text-sm font-medium text-slate-200">
+          <label className="mb-2 block text-sm font-medium text-slate-700">
             Xác nhận mật khẩu
           </label>
           <input
@@ -123,22 +123,22 @@ const RegisterPage = () => {
             placeholder="Nhập lại mật khẩu"
             value={form.confirmPassword}
             onChange={handleChange}
-            className="h-12 w-full rounded-2xl border border-white/10 bg-slate-900/70 px-4 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+            className="h-12 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
           />
         </div>
 
         <button
           type="submit"
-          className="h-12 w-full rounded-2xl bg-gradient-to-r from-fuchsia-500 to-violet-600 text-sm font-semibold text-white shadow-lg shadow-fuchsia-500/20 transition hover:scale-[1.01] hover:from-fuchsia-400 hover:to-violet-500 active:scale-[0.99]"
+          className="h-12 w-full rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 text-sm font-semibold text-white shadow-md transition hover:scale-[1.01] active:scale-[0.99]"
         >
           Tạo tài khoản
         </button>
 
-        <p className="pt-2 text-center text-sm text-slate-400">
+        <p className="pt-2 text-center text-sm text-slate-500">
           Đã có tài khoản?{" "}
           <Link
             to="/login"
-            className="font-semibold text-cyan-400 transition hover:text-cyan-300"
+            className="font-semibold text-cyan-600 transition hover:text-cyan-500"
           >
             Đăng nhập
           </Link>
