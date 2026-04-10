@@ -129,7 +129,7 @@ const RegisterPage = () => {
 
         <button
           type="submit"
-          className="h-12 w-full rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 text-sm font-semibold text-white shadow-md transition hover:scale-[1.01] active:scale-[0.99]"
+          className="h-12 w-full rounded-2xl bg-linear-to-r from-cyan-500 to-blue-600 text-sm font-semibold text-white shadow-md transition hover:scale-[1.01] active:scale-[0.99]"
         >
           Tạo tài khoản
         </button>
