@@ -37,6 +37,14 @@ import CompanyDetailPage from "../pages/public/CompanyDetailPage";
 import JobDetailPage from "../pages/public/JobDetailPage";
 import CandidateJobsPage from "../pages/candidate/CandidateJobsPage";
 import CandidateJobDetailPage from "../pages/candidate/CandidateJobDetailPage";
+import ApplicantDetailPage from "../pages/recruiter/ApplicantDetailPage";
+import EditJobPage from "../pages/recruiter/EditJobPage";
+import CompanyManagementPage from "../pages/admin/CompanyManagementPage";
+import CategoryManagementPage from "../pages/admin/CategoryManagementPage";
+import ReportPage from "../pages/admin/ReportPage";
+import UserDetailPage from "../pages/admin/UserDetailPage";
+import JobModerationDetailPage from "../pages/admin/JobModerationDetailPage";
+import SettingsPage from "../pages/admin/SettingsPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -52,6 +60,8 @@ const router = createBrowserRouter([
       { path: "register", element: <RegisterPage /> },
       { path: "redirect-by-role", element: <RoleRedirect /> },
       { path: "unauthorized", element: <UnauthorizedPage /> },
+      { path: "my-jobs/:id/edit", element: <EditJobPage /> },
+      { path: "applications/:id", element: <ApplicantDetailPage /> },
     ],
   },
   {
@@ -64,7 +74,13 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <AdminDashboardPage /> },
       { path: "users", element: <UserManagementPage /> },
+       { path: "users/:id", element: <UserDetailPage /> },
       { path: "jobs", element: <JobManagementPage /> },
+      { path: "jobs/:id", element: <JobModerationDetailPage /> },
+      { path: "companies", element: <CompanyManagementPage /> },
+      { path: "categories", element: <CategoryManagementPage /> },
+      { path: "reports", element: <ReportPage /> },
+      { path: "settings", element: <SettingsPage /> },
     ],
   },
   {

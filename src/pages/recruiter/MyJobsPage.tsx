@@ -44,7 +44,9 @@ const MyJobsPage = () => {
       <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <p className="text-sm font-medium text-cyan-700">My Job Posts</p>
-          <h2 className="mt-2 text-3xl font-bold text-slate-900">Quản lý tin tuyển dụng</h2>
+          <h2 className="mt-2 text-3xl font-bold text-slate-900">
+            Quản lý tin tuyển dụng
+          </h2>
           <p className="mt-3 text-base leading-8 text-slate-600">
             Theo dõi trạng thái tin tuyển dụng, số lượng ứng viên và hiệu quả hiển thị.
           </p>
@@ -101,14 +103,18 @@ const MyJobsPage = () => {
 
                 <h3 className="text-xl font-bold text-slate-900">{job.title}</h3>
                 <p className="mt-2 text-sm text-slate-500">
-                  {job.applicants} ứng viên • {job.views} lượt xem • Cập nhật {job.updatedAt}
+                  {job.applicants} ứng viên • {job.views} lượt xem • Cập nhật{" "}
+                  {job.updatedAt}
                 </p>
               </div>
 
               <div className="flex flex-wrap gap-3">
-                <button className="inline-flex h-11 items-center rounded-2xl border border-slate-200 bg-white px-5 text-sm font-medium text-slate-700 transition hover:bg-slate-50">
+                <Link
+                  to={`/recruiter/my-jobs/${job.id}/edit`}
+                  className="inline-flex h-11 items-center rounded-2xl border border-slate-200 bg-white px-5 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
+                >
                   Chỉnh sửa
-                </button>
+                </Link>
                 <Link
                   to="/recruiter/applications"
                   className="inline-flex h-11 items-center rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 px-5 text-sm font-semibold text-white shadow-sm"

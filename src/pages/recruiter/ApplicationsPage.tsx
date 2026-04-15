@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const applicants = [
   {
     id: 1,
@@ -43,9 +45,12 @@ const ApplicationsPage = () => {
     <section className="space-y-8">
       <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-sm">
         <p className="text-sm font-medium text-cyan-700">Applications</p>
-        <h2 className="mt-2 text-3xl font-bold text-slate-900">Quản lý ứng viên ứng tuyển</h2>
+        <h2 className="mt-2 text-3xl font-bold text-slate-900">
+          Quản lý ứng viên ứng tuyển
+        </h2>
         <p className="mt-4 max-w-3xl text-base leading-8 text-slate-600">
-          Lọc, đánh giá và theo dõi ứng viên theo từng vị trí tuyển dụng để tối ưu quá trình tuyển chọn.
+          Lọc, đánh giá và theo dõi ứng viên theo từng vị trí tuyển dụng để tối ưu
+          quá trình tuyển chọn.
         </p>
       </div>
 
@@ -100,9 +105,12 @@ const ApplicationsPage = () => {
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900">{applicant.name}</h3>
+                  <h3 className="text-xl font-bold text-slate-900">
+                    {applicant.name}
+                  </h3>
                   <p className="mt-2 text-sm text-slate-500">
-                    Ứng tuyển vị trí {applicant.appliedJob} • Ngày {applicant.appliedAt}
+                    Ứng tuyển vị trí {applicant.appliedJob} • Ngày{" "}
+                    {applicant.appliedAt}
                   </p>
 
                   <div className="mt-4 flex flex-wrap gap-2">
@@ -119,9 +127,12 @@ const ApplicationsPage = () => {
               </div>
 
               <div className="flex flex-wrap gap-3">
-                <button className="inline-flex h-11 items-center rounded-2xl border border-slate-200 bg-white px-5 text-sm font-medium text-slate-700 transition hover:bg-slate-50">
+                <Link
+                  to={`/recruiter/applications/${applicant.id}`}
+                  className="inline-flex h-11 items-center rounded-2xl border border-slate-200 bg-white px-5 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
+                >
                   Xem hồ sơ
-                </button>
+                </Link>
                 <button className="inline-flex h-11 items-center rounded-2xl border border-slate-200 bg-white px-5 text-sm font-medium text-slate-700 transition hover:bg-slate-50">
                   Đặt lịch PV
                 </button>
